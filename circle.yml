@@ -1,0 +1,28 @@
+machine:
+  ruby:
+    version: 2.2.5
+
+#machine:
+#  xcode:
+#    version: "7.3"
+
+dependencies:
+  pre:
+    - gem install bundler
+    - gem install fastlane
+    - bundle update
+
+  override:
+    - bundle install: # note ':' here
+        timeout: 180 # fail if command has no output for 3 minutes  
+
+#test:
+#  override:    
+#    - ruby ./lib/apprepo.rb run
+#    - ruby ./lib/apprepo.rb run --ipa ./sampleapp.ipa
+#    - RAILS_ENV=test bundle exec rspec -r rspec_junit_formatter --format RspecJunitFormatter -o $CIRCLE_TEST_REPORTS/rspec/junit.xml
+
+## Custom notifications
+notify:
+  webhooks:
+    - url: https://hooks.slack.com/services/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?payload={"text":"<https://slack.com>"}
