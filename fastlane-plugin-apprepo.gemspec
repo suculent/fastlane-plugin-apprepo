@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.version       = Fastlane::Apprepo::VERSION
   spec.authors       = ['Matej Sychra']
   spec.email         = ['suculent@me.com']
-  spec.summary       = AppRepo::DESCRIPTION
-  spec.description   = AppRepo::DESCRIPTION
+  spec.summary       = Fastlane::AppRepo::DESCRIPTION
+  spec.description   = Fastlane::AppRepo::DESCRIPTION
   spec.homepage      = 'https://github.com/suculent/fastlane-plugin-apprepo'
   spec.license       = 'MIT'
 
