@@ -1,6 +1,10 @@
 module Fastlane
-  module AppRepo
+  module Apprepo
+
     VERSION = '0.1.0'
     DESCRIPTION = 'experimental fastlane plugin'
+
+    puts "Loaded " + DESCRIPTION + " Version " + VERSION
+
   end
 end
