@@ -1,4 +1,4 @@
-#require_relative 'apprepo/version'
+# require_relative 'apprepo/version'
 require 'fastlane/plugin/apprepo/version'
 
 module Fastlane
