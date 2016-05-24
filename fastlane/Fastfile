@@ -1,35 +1,36 @@
 fastlane_version "1.90.0"
 
-default_platform :ruby
+default_platform :mac
 
-platform :ruby do
+platform :mac do
   before_all do
     ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
   end
 
   desc "Runs all the tests"
   lane :test do
-    rspec
+    sh "rspec .."
   end
 
-  desc “Build a RubyGem“
+  desc "Build a RubyGem"
   lane :build do
-    sh "gem build fastlane-plugin-apprepo.gemspec"
+    sh "gem build ../fastlane-plugin-apprepo.gemspec"  
   end
 
   desc "Deploy a new version to the RubyGems.org"
   lane :deploy do
-    sh "gem push fastlane-plugin-apprepo-0.1.0.gem"
-  end
-
-  # You can define as many lanes as you want
-
-  after_all do |lane|
-    # This block is called, only if the executed lane was successful
+    sh "gem push ../fastlane-plugin-apprepo-0.1.0.gem"
 
     slack(
       message: "Successfully deployed new Fastlane Plugin Update."
     )
+  end
+
+  after_all do |lane|
+    # This block is called, only if the executed lane was successful
+    #slack(
+    #  message: "Successfully deployed new Fastlane Plugin Update."
+    #)
   end
 
   error do |lane, exception|
