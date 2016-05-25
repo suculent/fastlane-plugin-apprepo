@@ -1,0 +1,4 @@
+AllCops:
+  Exclude:
+    - 'lib/fastlane/plugin/apprepo/actions/apprepo_action.rb'
+    - 'lib/fastlane/plugin/apprepo/version.rb'

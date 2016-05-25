@@ -16,11 +16,12 @@ dependencies:
     - bundle install: # note ':' here
         timeout: 180 # fail if command has no output for 3 minutes  
 
-#test:
-#  override:    
+test:
+  override:    
+    - RAILS_ENV=test bundle exec rspec -r rspec_junit_formatter --format RspecJunitFormatter -o $CIRCLE_TEST_REPORTS/rspec/junit.xml
 #    - ruby ./lib/apprepo.rb run
 #    - ruby ./lib/apprepo.rb run --ipa ./sampleapp.ipa
-#    - RAILS_ENV=test bundle exec rspec -r rspec_junit_formatter --format RspecJunitFormatter -o $CIRCLE_TEST_REPORTS/rspec/junit.xml
+  
 
 ## Custom notifications
 notify:

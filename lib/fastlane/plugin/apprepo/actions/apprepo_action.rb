@@ -2,6 +2,13 @@ require 'fastlane'
 
 module Fastlane
   module Actions
+    #  Action subclass for the Fastlane plugin
+
+    # rubocop:disable Metrics/AbcSize
+    # rubocop:disable Metrics/AbcSize
+    # rubocop:disable Metrics/MethodLength
+    # rubocop:disable Metrics/CyclomaticComplexity
+    # rubocop:disable Metrics/PerceivedComplexity
     class ApprepoAction < Action
       def self.run(_params)
         require 'apprepo'
@@ -65,24 +72,31 @@ module Fastlane
                                        short_option: '-d',
                                        optional: true,
                                        env_name: 'APPREPO_DESCRIPTION',
-                                       description: 'Long description for your Apprepo server'),
-          FastlaneCore::ConfigItem.new(key: :metadata_path,
+                                       description: 'Long detailed description for your Apprepo server',
+                                       default_value: ''),
+          FastlaneCore::ConfigItem.new(key: :repo_summary,
+                                       short_option: '-s',
+                                       optional: true,
+                                       env_name: 'APPREPO_SUMMARY',
+                                       description: 'Short description for your Apprepo server',
+                                       default_value: ''),
+          FastlaneCore::ConfigItem.new(key: :manifest_path,
                                        short_option: '-m',
                                        description: 'Path to the folder containing the metadata files',
                                        optional: true),
-          FastlaneCore::ConfigItem.new(key: :meta_title,
+          FastlaneCore::ConfigItem.new(key: :repo_title,
                                        short_option: '-a',
                                        description: 'Name of the app',
-                                       optional: true),
+                                       optional: false),
           FastlaneCore::ConfigItem.new(key: :skip_binary_upload,
-                                       description: 'Skip uploading an ipa or pkg to iTunes Connect',
+                                       description: 'Skip uploading an ipa or pkg to AppRepo',
                                        is_string: false,
                                        default_value: false),
           FastlaneCore::ConfigItem.new(key: :app_version,
                                        short_option: '-z',
                                        description: 'The version that should be edited or created',
                                        optional: true),
-          FastlaneCore::ConfigItem.new(key: :skip_metadata,
+          FastlaneCore::ConfigItem.new(key: :skip_manifest,
                                        description: "Don't upload the metadata (e.g. title, description), this will still upload screenshots",
                                        is_string: false,
                                        default_value: false),
@@ -112,7 +126,7 @@ module Fastlane
         ]
       end
 
-      def self.is_supported?(platform)
+      def self.supported?(platform)
         [:ios, :mac].include? platform
       end
 

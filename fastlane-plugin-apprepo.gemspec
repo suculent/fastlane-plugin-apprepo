@@ -14,7 +14,11 @@ Gem::Specification.new do |spec|
   spec.homepage      = 'https://github.com/suculent/fastlane-plugin-apprepo'
   spec.license       = 'MIT'
 
-  spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
+  spec_files = `git ls-files -z`.split("\x0").reject do |f|
+    f.match(%r{^(test|spec|features)/})
+  end
+
+  spec.files         = spec_files
   spec.require_paths = ['lib']
 
   spec.add_development_dependency 'json', '= 1.8.1'

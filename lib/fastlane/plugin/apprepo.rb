@@ -1,7 +1,7 @@
-# require_relative 'apprepo/version'
 require 'fastlane/plugin/apprepo/version'
 
 module Fastlane
+  # Root module of the plugin (seems like a class-loader)
   module Apprepo
     # Return all .rb files inside the "actions" and "helper" directory
     def self.all_classes
