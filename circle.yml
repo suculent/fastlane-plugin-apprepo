@@ -11,6 +11,7 @@ dependencies:
     - gem install bundler
     - gem install fastlane
     - bundle update
+    - COVERALLS_REPO_TOKEN=3gibQQGsuI6OVgOdth7jMxhsP7tRQw2FD
 
   override:
     - bundle install: # note ':' here
