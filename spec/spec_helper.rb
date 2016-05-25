@@ -1,3 +1,7 @@
+require 'coveralls'
+
+Coveralls.wear!
+
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 
 # This module is only used to check the environment is currently a testing env
