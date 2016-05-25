@@ -1,5 +1,5 @@
 require 'coveralls'
-Coveralls.wear! unless ENV["FASTLANE_SKIP_UPDATE_CHECK"]
+Coveralls.wear! # unless ENV["FASTLANE_SKIP_UPDATE_CHECK"]
 
 
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
