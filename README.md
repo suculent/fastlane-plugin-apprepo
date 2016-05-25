@@ -5,10 +5,10 @@
 ![](https://img.shields.io/badge/_status_-_waiting--for--fastlane--plugins--manager_-yellow.svg)
 [![Coverage](https://img.shields.io/coveralls/suculent/fastlane-plugin-apprepo.svg)](https://coveralls.io/github/suculent/fastlane-plugin-apprepo)
 
-### An experimental fastlane plugin
+### An experimental Fastlane plugin
 
 Work in progress. This is nothing more than an empty structure for a Fastlane plugin. It's existing published gem and can be installed. It should not cause any errors, just print out some lines of text.
 
 It already has all options required by my other [Apprepo/SFTP uploader](https://github.com/suculent/apprepo) project, but there's not much to link, until upstream project will be complete.
 
-
+Check out [Fastlane](https://fastlane.tools)
