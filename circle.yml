@@ -19,7 +19,7 @@ dependencies:
 
 test:
   override:    
-    - RAILS_ENV=test bundle exec rspec -r rspec_junit_formatter --format RspecJunitFormatter -o $CIRCLE_TEST_REPORTS/rspec/junit.xml
+    - COVERALLS_REPO_TOKEN=3gibQQGsuI6OVgOdth7jMxhsP7tRQw2FD RAILS_ENV=test bundle exec rspec -r rspec_junit_formatter --format RspecJunitFormatter -o $CIRCLE_TEST_REPORTS/rspec/junit.xml
 #    - ruby ./lib/apprepo.rb run
 #    - ruby ./lib/apprepo.rb run --ipa ./sampleapp.ipa
   
