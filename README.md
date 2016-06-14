@@ -38,7 +38,7 @@ Get in contact with the developer on Twitter: [@igraczech](https://twitter.com/i
 - Upload a new IPA file without Xcode from any Mac
 - Maintain your app manifest locally and push changes to AppRepo Server (optionally)
 - Easily implement a real Continuous Deployment process using [fastlane](https://fastlane.tools)
-- Store the configuration in git to easily deploy from **any** Mac with installed AppRepo RSA key, including your Continuous Integration server.
+- Store the configuration in git to easily deploy from **any** Mac, including your Continuous Integration server.
 
 To upload builds to AppStore check out [deliver](https://github.com/fastlane/fastlane/tree/master/deliver).
 
