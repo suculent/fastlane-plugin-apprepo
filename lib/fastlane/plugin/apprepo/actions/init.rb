@@ -2,8 +2,8 @@ module Fastlane
   module Actions
     class InitAction < Action
       def self.run(_params)
-        #sh 'bundle exec rubocop -D'
-         command :init do |c|
+        # sh 'bundle exec rubocop -D'
+        command :init do |c|
           c.syntax = 'apprepo init'
           c.description = 'Create the initial `apprepo` configuration'
           c.action do |_args, options|

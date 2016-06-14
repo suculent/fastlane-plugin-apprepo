@@ -20,7 +20,7 @@ module Fastlane
 
         puts _params
 
-         command :run do |c|
+        command :run do |c|
           c.syntax = 'apprepo'
           c.description = 'Upload IPA and metadata to SFTP (e.g. Apprepo)'
           c.action do |_args, options|
@@ -42,7 +42,6 @@ module Fastlane
             Apprepo::Runner.new(options).run
           end
         end
-
       end
 
       #####################################################

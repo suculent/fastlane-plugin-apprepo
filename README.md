@@ -75,17 +75,22 @@ From now on, you can run `apprepo` to deploy a new update, or just upload new ap
 
 **Based on gem apprepo, supposed to change.**
 
-Initialize Repofile or upload IPA and manifest.json based on that file:
+Initialize Repofile:
 
-    apprepo run
+    fastlane apprepo init
+    
+Upload IPA and manifest.json based on Repofile:
+
+    fastlane apprepo run
     
 Download manifest.json from AppRepo Server:
 
-    apprepo download_manifest
+    fastlane apprepo download_manifest
     
 Upload IPA and manifest:
     
-    apprepo submit   
+    fastlane apprepo submit
+
 
 # Credentials
 
