@@ -1,7 +1,7 @@
 require 'coveralls'
 Coveralls.wear! # unless ENV["FASTLANE_SKIP_UPDATE_CHECK"]
 
-#require 'webmock/rspec'
+# require 'webmock/rspec'
 
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 
@@ -12,4 +12,4 @@ end
 require 'fastlane' # to import the Action super class
 require 'fastlane/plugin/apprepo' # import the actual plugin
 
-#WebMock.disable_net_connect!(allow: 'coveralls.io')
+# WebMock.disable_net_connect!(allow: 'coveralls.io')
