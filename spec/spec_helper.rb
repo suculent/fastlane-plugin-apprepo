@@ -10,6 +10,6 @@ module SpecHelper
 end
 
 require 'fastlane' # to import the Action super class
-require 'fastlane/plugin/apprepo' # import the actual plugin
+require 'fastlane/plugin/Apprepo' # import the actual plugin
 
 # WebMock.disable_net_connect!(allow: 'coveralls.io')

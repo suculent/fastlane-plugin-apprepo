@@ -15,9 +15,12 @@ module Fastlane
 
         if defined?(::Apprepo::Command::Make)
           # New `apprepo make` command
+          puts 'New `apprepo make` command'
           ::Apprepo::Command::Make.run
+
         else
           # Legacy `apprepo` command
+          puts 'Legacy `apprepo` command'
           ::Apprepo::Command.run
         end
       end
