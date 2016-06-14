@@ -14,14 +14,14 @@ dependencies:
         timeout: 180 # fail if command has no output for 3 minutes  
 
 test:
-  override:    
-    #- COVERALLS_REPO_TOKEN=5NIxBldNBfJzPgvlQnVojxNNW0197fUUf RAILS_ENV=test bundle exec rspec
-    #- COVERALLS_REPO_TOKEN=3gibQQGsuI6OVgOdth7jMxhsP7tRQw2FD RAILS_ENV=test bundle exec rspec
-    # COVERALLS_REPO_TOKEN=3gibQQGsuI6OVgOdth7jMxhsP7tRQw2FD RAILS_ENV=test bundle exec rspec -r rspec_junit_formatter --format RspecJunitFormatter -o $CIRCLE_TEST_REPORTS/rspec/junit.xml
+  override:        
     - nslookup repo.teacloud.net
-    - ruby ./lib/fastlane/plugin/apprepo.rb run
-    - ruby ./lib/fastlane/plugin/apprepo.rb download_manifest
-    - ruby ./lib/fastlane/plugin/apprepo.rb submit        
+    - ruby ./lib/fastlane/plugin/Apprepo.rb run
+    - ruby ./lib/fastlane/plugin/Apprepo.rb download_manifest
+    - ruby ./lib/fastlane/plugin/Apprepo.rb submit
+    - COVERALLS_REPO_TOKEN=5NIxBldNBfJzPgvlQnVojxNNW0197fUUf RAILS_ENV=test bundle exec rspec
+    - COVERALLS_REPO_TOKEN=3gibQQGsuI6OVgOdth7jMxhsP7tRQw2FD RAILS_ENV=test bundle exec rspec
+    - COVERALLS_REPO_TOKEN=3gibQQGsuI6OVgOdth7jMxhsP7tRQw2FD RAILS_ENV=test bundle exec rspec -r rspec_junit_formatter --format RspecJunitFormatter -o $CIRCLE_TEST_REPORTS/rspec/junit.xml
     - curl -X POST --data-urlencode 'payload={"text":"CirleCI Integration Completed."}' https://hooks.slack.com/services/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  
 
 ## Custom notifications
