@@ -31,7 +31,7 @@ Get in contact with the developer on Twitter: [@igraczech](https://twitter.com/i
 
 -------
 
-<h5 align="center"><code>fastlane-plugin-apprepo</code> is a 3rd party plugin to <a href="https://fastlane.tools">fastlane</a>: The easiest way to automate building and releasing your iOS and Android apps. I'm in contact with Felix Krause to make this part of Fastlane as open SFTP uploader adjacent to `Deliver`.</h5>
+<h5 align="center"><code>fastlane-plugin-apprepo</code> is a 3rd party plugin to <a href="https://fastlane.tools">fastlane</a>: The easiest way to automate building and releasing your iOS and Android apps.</h5>
 
 # Features
 - Submit IPA to SFTP server (e.g. AppRepo Server) completely automatically
