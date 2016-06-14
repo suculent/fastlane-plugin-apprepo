@@ -2,7 +2,7 @@ module Fastlane
   module Actions
     class SubmitAction < Action
       def self.run(_params)
-        #sh 'bundle exec rubocop -D'
+        # sh 'bundle exec rubocop -D'
         puts _params
         command :submit do |c|
           c.syntax = 'apprepo submit'

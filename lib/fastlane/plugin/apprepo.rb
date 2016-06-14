@@ -26,7 +26,7 @@ module Fastlane
     require current
   end
 
-   # Test only, should be removed...
+  # Test only, should be removed...
   UI.message('Initializing new CommandsGenerator')
   cgen = Apprepo::CommandsGenerator.new
   UI.message('Downloading Manifest...')
