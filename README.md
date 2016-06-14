@@ -31,12 +31,12 @@ Get in contact with the developer on Twitter: [@igraczech](https://twitter.com/i
 
 -------
 
-<h5 align="center"><code>apprepo</code> is deprecated 3rd party extension of <a href="https://fastlane.tools">fastlane</a>: The easiest way to automate building and releasing your iOS and Android apps. I'm in contact with Felix Krause to make this part of Fastlane as open SFTP uploader adjacent to `Deliver`.</h5>
+<h5 align="center"><code>fastlane-plugin-apprepo</code> is a 3rd party plugin to <a href="https://fastlane.tools">fastlane</a>: The easiest way to automate building and releasing your iOS and Android apps. I'm in contact with Felix Krause to make this part of Fastlane as open SFTP uploader adjacent to `Deliver`.</h5>
 
 # Features
-- Submit IPA to AppRepo completely automatically
-- Upload a new IPA file to AppRepo without Xcode from any Mac
-- Maintain your app manifest locally and push changes to AppRepo
+- Submit IPA to SFTP server (e.g. AppRepo Server) completely automatically
+- Upload a new IPA file without Xcode from any Mac
+- Maintain your app manifest locally and push changes to AppRepo Server (optionally)
 - Easily implement a real Continuous Deployment process using [fastlane](https://fastlane.tools)
 - Store the configuration in git to easily deploy from **any** Mac with installed AppRepo RSA key, including your Continuous Integration server.
 
