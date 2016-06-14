@@ -2,16 +2,16 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-require 'fastlane/plugin/apprepo/version'
+require 'fastlane/plugin/Apprepo/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'fastlane-plugin-apprepo'
+  spec.name          = 'fastlane-plugin-Apprepo'
   spec.version       = Fastlane::Apprepo::VERSION
   spec.authors       = ['Matej Sychra']
   spec.email         = ['suculent@me.com']
   spec.summary       = Fastlane::Apprepo::SUMMARY
   spec.description   = Fastlane::Apprepo::DESCRIPTION
-  spec.homepage      = 'https://github.com/suculent/fastlane-plugin-apprepo'
+  spec.homepage      = 'https://github.com/suculent/fastlane-plugin-Apprepo'
   spec.license       = 'MIT'
 
   spec_files = `git ls-files -z`.split("\x0").reject do |f|

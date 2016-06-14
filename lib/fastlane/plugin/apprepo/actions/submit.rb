@@ -9,10 +9,10 @@ module Fastlane
           c.description = 'Submit a specific build-nr, use latest.'
           c.action do |_args, options|
             config = FastlaneCore::Configuration
-            available_opts = AppRepo::Options.available_options
+            available_opts = Apprepo::Options.available_options
             options = config.create(available_opts, options.__hash__)
             options.load_configuration_file('Repofile')
-            AppRepo::Runner.new(options).run
+            Apprepo::Runner.new(options).run
           end
         end
       end

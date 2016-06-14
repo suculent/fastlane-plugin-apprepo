@@ -9,7 +9,7 @@ module Fastlane
       def initialize(options)
         self.options = options
         Apprepo::DetectValues.new.run!(self.options)
-        FastlaneCore::PrintTable.print_values(config: options, hide_keys: [:repo_password], mask_keys: [:repo_key], title: "apprepo-sftp #{Apprepo::VERSION} Summary")
+        FastlaneCore::PrintTable.print_values(config: options, hide_keys: [:repo_password], mask_keys: [:repo_key], title: "Apprepo-sftp #{Apprepo::VERSION} Summary")
       end
 
       # rubocop:disable Metrics/AbcSize

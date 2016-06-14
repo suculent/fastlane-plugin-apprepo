@@ -14,10 +14,10 @@ module Fastlane
 
             require 'apprepo/setup'
             config = FastlaneCore::Configuration
-            available_opts = AppRepo::Options.available_options
+            available_opts = Apprepo::Options.available_options
             options = config.create(available_opts, options.__hash__)
-            AppRepo::Runner.new(options)
-            AppRepo::Setup.new.run(options)
+            Apprepo::Runner.new(options)
+            Apprepo::Setup.new.run(options)
           end
         end
       end

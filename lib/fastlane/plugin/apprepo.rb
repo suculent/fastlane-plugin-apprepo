@@ -26,4 +26,12 @@ module Fastlane
     puts 'Requiring ' + current
     require current
   end
+
+   # Test only, should be removed...
+  UI.message('Initializing new CommandsGenerator')
+  cgen = Apprepo::CommandsGenerator.new
+  UI.message('Downloading Manifest...')
+  cgen.download_manifest
+  UI.message('Running Deployment...')
+  cgen.run
 end

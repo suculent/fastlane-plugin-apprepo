@@ -8,10 +8,10 @@ module Fastlane
           c.description = 'Download metadata only'
           c.action do |_args, options|
             config = FastlaneCore::Configuration
-            available_opts = AppRepo::Options.available_options
+            available_opts = Apprepo::Options.available_options
             options = config.create(available_opts, options.__hash__)
             options.load_configuration_file('Repofile')
-            AppRepo::Runner.new(options).download_manifest
+            Apprepo::Runner.new(options).download_manifest
           end
         end
       end

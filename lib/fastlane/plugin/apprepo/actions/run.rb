@@ -1,16 +1,18 @@
+require_relative '../version.rb'
+
 module Fastlane
   module Actions
     class RunAction < Action
       def self.run(_params)
-        program :version, AppRepo::VERSION
-        program :description, AppRepo::DESCRIPTION
+        program :version, Apprepo::VERSION
+        program :description, Apprepo::DESCRIPTION
         program :help, 'Author', 'Matej Sychra <suculent@me.com>'
         program :help, 'Website', 'https://github.com/suculent/apprepo'
         program :help, 'GitHub', 'https://github.com/suculent/apprepo/tree/master/apprepo'
         program :help_formatter, :compact
 
         generator = FastlaneCore::CommanderGenerator.new
-        generator.generate(AppRepo::Options.available_options)
+        generator.generate(Apprepo::Options.available_options)
 
         global_option('--verbose') { $verbose = true }
 
@@ -20,24 +22,24 @@ module Fastlane
 
          command :run do |c|
           c.syntax = 'apprepo'
-          c.description = 'Upload IPA and metadata to SFTP (e.g. AppRepo)'
+          c.description = 'Upload IPA and metadata to SFTP (e.g. Apprepo)'
           c.action do |_args, options|
             config = FastlaneCore::Configuration
-            available_opts = AppRepo::Options.available_options
+            available_opts = Apprepo::Options.available_options
             options = config.create(available_opts, options.__hash__)
             loaded = options.load_configuration_file('Repofile')
             loaded = true if options[:repo_description] || options[:ipa]
 
             unless loaded
-              UI.message('[AppRepo::CommandsGenerator] configuration file not loaded')
+              UI.message('[Apprepo::CommandsGenerator] configuration file not loaded')
               if UI.confirm('No Repofile found. Do you want to setup apprepo?')
                 require 'apprepo/setup'
-                AppRepo::Setup.new.run(options)
+                Apprepo::Setup.new.run(options)
                 return 0
               end
             end
 
-            AppRepo::Runner.new(options).run
+            Apprepo::Runner.new(options).run
           end
         end
 

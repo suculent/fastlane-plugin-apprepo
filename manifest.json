@@ -1,0 +1,10 @@
+{
+  "appcode" : "APPREPO",
+  "filename" : "test.ipa",
+  "bundle-identifier" : "cz.t-mobile.apprepo",
+  "bundle-version" : "1.0",
+  "title" : "AppRepo",
+  "subtitle" : "AppRepo iOS Mobile Client",
+  "description" : "Your Enterprise AppStore",
+  "notify" : "true"
+}

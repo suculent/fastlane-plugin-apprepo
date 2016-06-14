@@ -1,9 +1,9 @@
 module Fastlane
-  module AppRepo
+  module Apprepo
     # Responsible for setting up the Repofile configuration
     class Setup
       def setup_apprepo(file_path, data, _apprepo_path, _options)
-        UI.message('[AppRepo:Setup] Setting up...')
+        UI.message('[Apprepo:Setup] Setting up...')
         File.write(file_path, data)
 
         # TODO: implement later
@@ -32,11 +32,11 @@ module Fastlane
         path = File.join(apprepo_path, 'metadata')
         FileUtils.mkdir_p(path)
         UI.success("TODO: DOWNLOAD MANIFEST'")
-        AppRepo::Uploader.new(options).download_manifest_only
+        Apprepo::Uploader.new(options).download_manifest_only
       end
 
       def run(options)
-        UI.message('[AppRepo:Setup] Running...')
+        UI.message('[Apprepo:Setup] Running...')
         containing = (File.directory?('fastlane') ? 'fastlane' : '.')
         file_path = File.join(containing, 'Repofile')
         data = generate_apprepo_file(containing, options)
@@ -45,5 +45,5 @@ module Fastlane
     end
   end
 
-  # @setup = new AppRepo::Setup
+  # @setup = new Apprepo::Setup
 end

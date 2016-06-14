@@ -1,7 +1,7 @@
 require 'fastlane_core'
 
 module Fastlane
-  module AppRepo
+  module Apprepo
     # Provides available options for the commands generator
     class Options
       # rubocop:disable Metrics/AbcSize
@@ -76,10 +76,10 @@ module Fastlane
                                        optional: false),
           FastlaneCore::ConfigItem.new(key: :appcode,
                                        short_option: '-o',
-                                       description: 'Name of the app on AppRepo',
+                                       description: 'Name of the app on Apprepo',
                                        optional: false),
           FastlaneCore::ConfigItem.new(key: :skip_binary_upload,
-                                       description: 'Skip uploading an ipa or to AppRepo',
+                                       description: 'Skip uploading an ipa or to Apprepo',
                                        is_string: false,
                                        default_value: false),
           FastlaneCore::ConfigItem.new(key: :app_version,
@@ -91,7 +91,7 @@ module Fastlane
                                        is_string: false,
                                        default_value: false),
           FastlaneCore::ConfigItem.new(key: :notify,
-                                       description: 'Notify AppRepo users on update',
+                                       description: 'Notify Apprepo users on update',
                                        is_string: false,
                                        default_value: false),
           FastlaneCore::ConfigItem.new(key: :build_number,

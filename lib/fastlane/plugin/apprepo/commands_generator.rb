@@ -9,11 +9,11 @@ module Fastlane
       include Commander::Methods
 
       def self.start
-        FastlaneCore::UpdateChecker.start_looking_for_update('apprepo')
+        FastlaneCore::UpdateChecker.start_looking_for_update('Apprepo')
         new.run
       ensure
         checker = FastlaneCore::UpdateChecker
-        checker.show_update_status('apprepo', Apprepo::VERSION)
+        checker.show_update_status('Apprepo', Apprepo::VERSION)
       end
 
       def download_manifest
@@ -33,8 +33,8 @@ module Fastlane
         program :version, Apprepo::VERSION
         program :description, Apprepo::DESCRIPTION
         program :help, 'Author', 'Matej Sychra <suculent@me.com>'
-        program :help, 'Website', 'https://github.com/suculent/apprepo'
-        program :help, 'GitHub', 'https://github.com/suculent/apprepo/tree/master/apprepo'
+        program :help, 'Website', 'https://github.com/suculent/Apprepo'
+        program :help, 'GitHub', 'https://github.com/suculent/Apprepo/tree/master/Apprepo'
         program :help_formatter, :compact
 
         generator = FastlaneCore::CommanderGenerator.new
@@ -45,7 +45,7 @@ module Fastlane
         always_trace!
 
         command :run do |c|
-          c.syntax = 'apprepo'
+          c.syntax = 'Apprepo'
           c.description = 'Upload IPA and metadata to SFTP (e.g. Apprepo)'
           c.action do |_args, options|
             config = FastlaneCore::Configuration
@@ -56,8 +56,8 @@ module Fastlane
 
             unless loaded
               UI.message('[Apprepo::CommandsGenerator] configuration file not loaded')
-              if UI.confirm('No Repofile found. Do you want to setup apprepo?')
-                require 'apprepo/setup'
+              if UI.confirm('No Repofile found. Do you want to setup Apprepo?')
+                require 'Apprepo/setup'
                 Apprepo::Setup.new.run(options)
                 return 0
               end
@@ -68,7 +68,7 @@ module Fastlane
         end
 
         command :download_manifest do |c|
-          c.syntax = 'apprepo download_manifest'
+          c.syntax = 'Apprepo download_manifest'
           c.description = 'Download metadata only'
           c.action do |_args, options|
             config = FastlaneCore::Configuration
@@ -80,7 +80,7 @@ module Fastlane
         end
 
         command :submit do |c|
-          c.syntax = 'apprepo submit'
+          c.syntax = 'Apprepo submit'
           c.description = 'Submit a specific build-nr, use latest.'
           c.action do |_args, options|
             config = FastlaneCore::Configuration
@@ -92,15 +92,15 @@ module Fastlane
         end
 
         command :init do |c|
-          c.syntax = 'apprepo init'
-          c.description = 'Create the initial `apprepo` configuration'
+          c.syntax = 'Apprepo init'
+          c.description = 'Create the initial `Apprepo` configuration'
           c.action do |_args, options|
             if File.exist?('Repofile') || File.exist?('fastlane/Repofile')
-              UI.important('You already got a running apprepo setup.')
+              UI.important('You already got a running Apprepo setup.')
               return 0
             end
 
-            require 'apprepo/setup'
+            require 'Apprepo/setup'
             config = FastlaneCore::Configuration
             available_opts = Apprepo::Options.available_options
             options = config.create(available_opts, options.__hash__)

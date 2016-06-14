@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/sychram/Desktop/fastlane-plugin-apprepo/lib/fastlane/plugin/apprepo.rb": [
+      "/Users/sychram/Desktop/fastlane-plugin-Apprepo/lib/fastlane/plugin/Apprepo.rb": [
         1,
         1,
         null,
@@ -55,7 +55,7 @@
         null,
         null
       ],
-      "/Users/sychram/Desktop/fastlane-plugin-apprepo/lib/fastlane/plugin/apprepo/actions/apprepo_action.rb": [
+      "/Users/sychram/Desktop/fastlane-plugin-Apprepo/lib/fastlane/plugin/Apprepo/actions/Apprepo_action.rb": [
         1,
         null,
         1,
