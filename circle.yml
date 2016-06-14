@@ -16,7 +16,7 @@ dependencies:
 test:
   override:        
     - nslookup repo.teacloud.net
-    - ruby ./lib/fastlane/plugin/apprepo.rb
+    - fastlane add_plugin apprepo # should call init only
     - ruby ./lib/fastlane/plugin/apprepo.rb download_manifest
     - ruby ./lib/fastlane/plugin/apprepo.rb submit
     - COVERALLS_REPO_TOKEN=5NIxBldNBfJzPgvlQnVojxNNW0197fUUf RAILS_ENV=test bundle exec rspec    
