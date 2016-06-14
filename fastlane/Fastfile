@@ -14,12 +14,12 @@ platform :mac do
 
   desc "Build a RubyGem"
   lane :build do
-    sh "gem build ../fastlane-plugin-Apprepo.gemspec"  
+    sh "gem build ../fastlane-plugin-apprepo.gemspec"  
   end
 
   desc "Deploy a new version to the RubyGems.org"
   lane :deploy do
-    sh "gem push ../fastlane-plugin-Apprepo-0.1.0.gem"
+    sh "gem push ../fastlane-plugin-apprepo-0.1.0.gem"
 
     slack(
       message: "Successfully deployed new Fastlane Plugin Update."

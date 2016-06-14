@@ -33,8 +33,8 @@ module Fastlane
         program :version, Apprepo::VERSION
         program :description, Apprepo::DESCRIPTION
         program :help, 'Author', 'Matej Sychra <suculent@me.com>'
-        program :help, 'Website', 'https://github.com/suculent/Apprepo'
-        program :help, 'GitHub', 'https://github.com/suculent/Apprepo/tree/master/Apprepo'
+        program :help, 'Website', 'https://github.com/suculent/apprepo'
+        program :help, 'GitHub', 'https://github.com/suculent/apprepo/tree/master/apprepo'
         program :help_formatter, :compact
 
         generator = FastlaneCore::CommanderGenerator.new
