@@ -23,7 +23,6 @@ module Fastlane
   # By default we want to import all available actions and helpers
   # A plugin can contain any number of actions and plugins
   Fastlane::Apprepo.all_classes.each do |current|
-    puts 'Requiring ' + current
     require current
   end
 
