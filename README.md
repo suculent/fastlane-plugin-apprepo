@@ -11,7 +11,7 @@ fastlane-plugin-apprepo
 [![Gem](https://img.shields.io/gem/v/fastlane-plugin-apprepo.svg?style=flat)](http://rubygems.org/gems/fastlane-plugin-apprepo)
 [![Coverage Status](https://coveralls.io/repos/github/suculent/fastlane-plugin-apprepo/badge.svg?branch=master)](https://coveralls.io/github/suculent/fastlane-plugin-apprepo?branch=master)
 
-###### Deliver IPAs, icons & manifest.json to AppRepo (or any other SFTP server) using a single command.
+###### Deliver IPAs, icons & manifest.json to a SFTP server using a single command.
 
 `fastlane-plugin-apprepo` can upload ipa files, app icons and manifest.json to your Enterprise iOS distribution site from the command line. 
 
@@ -64,8 +64,8 @@ Delivery module for your custom SFTP server (e.g. AppRepo, where it specifically
 
 - ```cd [your_project_folder]```
 - ```apprepo init```
-- Enter your AppRepo credentials (absolute path to RSA private key for your SFTP server)
-- Enter your `APPREPO` APPCODE for this application in AppRepo, you can omit this for own SFTP server (or expect it to be a directory at your SFTP home path as we don't want to limit your creativity).
+- Enter your AppRepo Server credentials (absolute path to RSA private key for your SFTP server)
+- Enter your `APPREPO` APPCODE for this application in AppRepo Server, you can omit this for own SFTP server (or expect it to be a directory at your SFTP home path as we don't want to limit your creativity).
 - Enjoy a good drink, while the computer does all the work for you
 
 From now on, you can run `apprepo` to deploy a new update, or just upload new app manifest.json and icons.
