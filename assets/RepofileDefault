@@ -1,0 +1,34 @@
+# encoding: utf-8
+
+###################### More Options ######################
+# If you want to have even more control, check out the documentation
+# https://github.com/suculent/apprepo/blob/master/Repofile.md
+
+
+###################### Automatically generated ######################
+# Feel free to remove the following line if you use fastlane (which you should)
+
+app_identifier "[[APP_IDENTIFIER]]"
+ipa "[[Apprepo_IPA_PATH]]"
+app_version "[[APP_VERSION]]"
+repo_title "[[APP_NAME]]"
+
+#
+# Authentication
+#
+
+# You can use your '~/.ssh/config' file to setup RSA keys to Apprepo, or use following options:
+
+repo_url "repo.teacloud.net"
+repo_user "circle"
+repo_key "./lib/assets/circle.pub"
+
+# notify true # Add this to automatically notify the Apprepo users after uploading metadata/binary. 
+
+# manifest_path "./manifest.json" # Path to the manifest.json you want to use. 
+
+# repo_summary "Some application"
+
+# repo_description "Detailed application description."
+
+# app_icon './AppIcon.png'

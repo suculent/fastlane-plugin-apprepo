@@ -5,4 +5,4 @@ Feature: uploader sends json
   Scenario: metadata upload
   Given an Uploader
   When I send it the run message
-  Then I should see "AppRepo:Uploader"
+  Then I should see "Apprepo:Uploader"

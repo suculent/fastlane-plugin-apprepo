@@ -1,4 +1,12 @@
-require 'fastlane/plugin/apprepo/version'
+#!/usr/bin/env ruby
+
+# encoding: utf-8
+
+require 'json'
+require 'fastlane'
+require 'fastlane_core'
+
+require_relative 'apprepo/version'
 
 module Fastlane
   # Root module of the plugin (seems like a class-loader)
@@ -8,10 +16,21 @@ module Fastlane
       Dir[File.expand_path('*/{actions,helper}/*.rb', File.dirname(__FILE__))]
     end
   end
-end
 
-# By default we want to import all available actions and helpers
-# A plugin can contain any number of actions and plugins
-Fastlane::Apprepo.all_classes.each do |current|
-  require current
+  Encoding.default_external = Encoding::UTF_8
+  Encoding.default_internal = Encoding::UTF_8
+
+  # By default we want to import all available actions and helpers
+  # A plugin can contain any number of actions and plugins
+  Fastlane::Apprepo.all_classes.each do |current|
+    require current
+  end
+
+   # Test only, should be removed...
+  UI.message('Initializing new CommandsGenerator')
+  cgen = Apprepo::CommandsGenerator.new
+  UI.message('Downloading Manifest...')
+  cgen.download_manifest
+  UI.message('Running Deployment...')
+  cgen.run
 end

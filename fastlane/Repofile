@@ -1,0 +1,33 @@
+###################### More Options ######################
+# If you want to have even more control, check out the documentation
+# https://github.com/suculent/apprepo/blob/master/Repofile.md
+
+###################### Automatically generated ######################
+# Feel free to remove the following line if you use fastlane (which you should)
+
+app_identifier "com.apprepo.test" # your app's bundle identifier
+ipa "./sampleapp.ipa" # can be overriden with --ipa
+manifest_path "./manifest.json" # Path to the manifest.json you want to use. 
+
+#
+# Authentication
+#
+
+# You can use your '~/.ssh/config' file to setup RSA keys to AppRepo, or use following options:
+
+
+repo_url "107.22.101.216" # repo.teacloud.net
+repo_user "circle"
+repo_key "assets/circle.key"
+# repo_key "/Users/sychram/.ssh/circle.key" # should have 'chmod 600'
+
+notify true # Add this to automatically notify the AppRepo users after uploading metadata/binary. 
+
+# Optionals
+
+app_version "0.1"
+app_icon "./assets/apprepo.png"
+appcode "APPREPO"
+repo_title "TestApp"
+repo_description "Some description is required for AppRepo users to know, that is this app."
+repo_summary "Experimental Fastlane Extension"
