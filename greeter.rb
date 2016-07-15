@@ -1,6 +1,6 @@
 # Hello World for RSpec tests
 class Greeter
   def greet
-    'Hello World!'
+    puts 'Hello World!'
   end
 end
