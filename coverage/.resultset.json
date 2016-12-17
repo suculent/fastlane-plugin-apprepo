@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/sychram/Desktop/fastlane-plugin-apprepo/lib/fastlane/plugin/apprepo.rb": [
+      "/Users/sychram/Desktop/Dropbox/fastlane-plugin-apprepo/lib/fastlane/plugin/apprepo.rb": [
         null,
         null,
         null,
@@ -27,8 +27,7 @@
         null,
         null,
         1,
-        15,
-        15,
+        13,
         null,
         null,
         null,
@@ -40,150 +39,7 @@
         1,
         null
       ],
-      "/Users/sychram/Desktop/fastlane-plugin-apprepo/lib/fastlane/plugin/apprepo/actions/apprepo_action.rb": [
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        1,
-        0,
-        null,
-        0,
-        null,
-        0,
-        0,
-        null,
-        null,
-        null,
-        0,
-        0,
-        null,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        0,
-        0,
-        null,
-        null,
-        null,
-        0,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        0,
-        0,
-        null,
-        null,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/sychram/Desktop/fastlane-plugin-apprepo/lib/fastlane/plugin/apprepo/actions/download_manifest.rb": [
+      "/Users/sychram/Desktop/Dropbox/fastlane-plugin-apprepo/lib/fastlane/plugin/apprepo/actions/download_manifest.rb": [
         1,
         1,
         1,
@@ -225,7 +81,7 @@
         null,
         null
       ],
-      "/Users/sychram/Desktop/fastlane-plugin-apprepo/lib/fastlane/plugin/apprepo/actions/init.rb": [
+      "/Users/sychram/Desktop/Dropbox/fastlane-plugin-apprepo/lib/fastlane/plugin/apprepo/actions/init.rb": [
         1,
         1,
         1,
@@ -273,38 +129,7 @@
         null,
         null
       ],
-      "/Users/sychram/Desktop/fastlane-plugin-apprepo/lib/fastlane/plugin/apprepo/actions/rubocop.rb": [
-        1,
-        1,
-        1,
-        1,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/sychram/Desktop/fastlane-plugin-apprepo/lib/fastlane/plugin/apprepo/actions/run.rb": [
+      "/Users/sychram/Desktop/Dropbox/fastlane-plugin-apprepo/lib/fastlane/plugin/apprepo/actions/run.rb": [
         1,
         null,
         1,
@@ -347,7 +172,6 @@
         null,
         null,
         0,
-        null,
         null,
         null,
         null,
@@ -375,7 +199,7 @@
         null,
         null
       ],
-      "/Users/sychram/Desktop/fastlane-plugin-apprepo/lib/fastlane/plugin/apprepo/actions/submit.rb": [
+      "/Users/sychram/Desktop/Dropbox/fastlane-plugin-apprepo/lib/fastlane/plugin/apprepo/actions/submit.rb": [
         1,
         1,
         1,
@@ -418,7 +242,7 @@
         null,
         null
       ],
-      "/Users/sychram/Desktop/fastlane-plugin-apprepo/lib/fastlane/plugin/apprepo/helper/analyser.rb": [
+      "/Users/sychram/Desktop/Dropbox/fastlane-plugin-apprepo/lib/fastlane/plugin/apprepo/helper/analyser.rb": [
         1,
         1,
         1,
@@ -455,7 +279,7 @@
         null,
         null
       ],
-      "/Users/sychram/Desktop/fastlane-plugin-apprepo/lib/fastlane/plugin/apprepo/helper/uploader.rb": [
+      "/Users/sychram/Desktop/Dropbox/fastlane-plugin-apprepo/lib/fastlane/plugin/apprepo/helper/uploader.rb": [
         null,
         null,
         1,
@@ -597,7 +421,7 @@
         1,
         null,
         1,
-        5,
+        4,
         null,
         null,
         null,
@@ -639,9 +463,9 @@
         1,
         1,
         null,
-        0,
-        0,
-        0,
+        1,
+        1,
+        1,
         null,
         0,
         0,
@@ -758,7 +582,7 @@
         null,
         null
       ],
-      "/Users/sychram/Desktop/fastlane-plugin-apprepo/lib/fastlane/plugin/apprepo/helper/options.rb": [
+      "/Users/sychram/Desktop/Dropbox/fastlane-plugin-apprepo/lib/fastlane/plugin/apprepo/helper/options.rb": [
         1,
         null,
         1,
@@ -880,7 +704,7 @@
         null,
         null
       ],
-      "/Users/sychram/Desktop/fastlane-plugin-apprepo/lib/fastlane/plugin/apprepo/helper/commands_generator.rb": [
+      "/Users/sychram/Desktop/Dropbox/fastlane-plugin-apprepo/lib/fastlane/plugin/apprepo/helper/commands_generator.rb": [
         1,
         null,
         1,
@@ -1003,7 +827,7 @@
         null,
         null
       ],
-      "/Users/sychram/Desktop/fastlane-plugin-apprepo/lib/fastlane/plugin/apprepo/helper/detect_values.rb": [
+      "/Users/sychram/Desktop/Dropbox/fastlane-plugin-apprepo/lib/fastlane/plugin/apprepo/helper/detect_values.rb": [
         null,
         1,
         1,
@@ -1034,7 +858,7 @@
         null,
         null
       ],
-      "/Users/sychram/Desktop/fastlane-plugin-apprepo/lib/fastlane/plugin/apprepo/helper/loader.rb": [
+      "/Users/sychram/Desktop/Dropbox/fastlane-plugin-apprepo/lib/fastlane/plugin/apprepo/helper/loader.rb": [
         1,
         null,
         1,
@@ -1051,7 +875,7 @@
         null,
         null
       ],
-      "/Users/sychram/Desktop/fastlane-plugin-apprepo/lib/fastlane/plugin/apprepo/helper/manifest.rb": [
+      "/Users/sychram/Desktop/Dropbox/fastlane-plugin-apprepo/lib/fastlane/plugin/apprepo/helper/manifest.rb": [
         1,
         null,
         1,
@@ -1097,7 +921,7 @@
         null,
         null
       ],
-      "/Users/sychram/Desktop/fastlane-plugin-apprepo/lib/fastlane/plugin/apprepo/helper/runner.rb": [
+      "/Users/sychram/Desktop/Dropbox/fastlane-plugin-apprepo/lib/fastlane/plugin/apprepo/helper/runner.rb": [
         1,
         null,
         1,
@@ -1167,7 +991,7 @@
         null,
         null
       ],
-      "/Users/sychram/Desktop/fastlane-plugin-apprepo/lib/fastlane/plugin/apprepo/helper/setup.rb": [
+      "/Users/sychram/Desktop/Dropbox/fastlane-plugin-apprepo/lib/fastlane/plugin/apprepo/helper/setup.rb": [
         1,
         1,
         null,
@@ -1218,7 +1042,7 @@
         null,
         null
       ],
-      "/Users/sychram/Desktop/fastlane-plugin-apprepo/spec/greeter_spec.rb": [
+      "/Users/sychram/Desktop/Dropbox/fastlane-plugin-apprepo/spec/greeter_spec.rb": [
         1,
         null,
         null,
@@ -1230,7 +1054,7 @@
         null,
         null
       ],
-      "/Users/sychram/Desktop/fastlane-plugin-apprepo/greeter.rb": [
+      "/Users/sychram/Desktop/Dropbox/fastlane-plugin-apprepo/greeter.rb": [
         null,
         1,
         1,
@@ -1239,6 +1063,6 @@
         null
       ]
     },
-    "timestamp": 1465937846
+    "timestamp": 1482013469
   }
 }
