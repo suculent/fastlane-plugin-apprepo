@@ -16,7 +16,7 @@ manifest_path "./manifest.json" # Path to the manifest.json you want to use.
 # You can use your '~/.ssh/config' file to setup RSA keys to AppRepo, or use following options:
 
 
-repo_url "107.22.101.216"
+repo_url "207.154.207.81"
 repo_user "circle"
 repo_key "assets/circle.key"
 # repo_key "/Users/sychram/.ssh/circle.key" # should have 'chmod 600'
