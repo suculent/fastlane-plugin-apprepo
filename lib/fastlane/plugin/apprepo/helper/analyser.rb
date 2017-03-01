@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'json'
-require 'net/ssh'
-require 'net/sftp'
+require 'net-ssh'
+require 'net-sftp'
 require 'fastlane_core'
 
 require_relative 'uploader'

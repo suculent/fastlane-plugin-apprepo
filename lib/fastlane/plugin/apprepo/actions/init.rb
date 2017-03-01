@@ -1,5 +1,10 @@
 module Fastlane
   module Actions
+    class ApprepoAction < Action
+      def self.is_supported?(platform)
+        true
+      end
+    end
     class InitAction < Action
       def self.run(_params)
         # sh 'bundle exec rubocop -D'
