@@ -20,8 +20,11 @@ module Fastlane
         has_binary = options[:ipa]
         if !options[:skip_binary_upload] && !options[:build_number] && has_binary
           upload_binary
+          UI.success('Finished the upload to Apprepo.')
+        else
+          UI.success('Binary upload skipped or no binary available.')
         end
-        UI.success('Finished the upload to Apprepo.')
+        
         notify unless options[:notify].nil?
       end
 

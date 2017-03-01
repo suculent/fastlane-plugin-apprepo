@@ -21,10 +21,11 @@ Gem::Specification.new do |spec|
   spec.files         = spec_files
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'fastlane'
-  spec.add_dependency 'net-ssh', '~> 3.1', '>= 3.1.1'
-  spec.add_dependency 'net-sftp', '~> 2.1', '>= 2.1.2'
-  spec.add_development_dependency 'json', '= 1.8.1'
+  spec.add_runtime_dependency 'fastlane', '~> 0'
+  spec.add_runtime_dependency 'net-ssh', '~> 3.1', '>= 3.1.1'
+  spec.add_runtime_dependency 'net-sftp', '~> 2.1', '>= 2.1.2'  
+  spec.add_runtime_dependency 'json', '= 1.8.1'
+  
   spec.add_development_dependency 'rspec', '~> 3.4', '>= 3.4.0'  
   spec.add_development_dependency 'pry', '~> 0'
 end
