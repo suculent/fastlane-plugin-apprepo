@@ -1,7 +1,7 @@
 module Fastlane
   module Actions
     class ApprepoAction < Action
-      def self.is_supported?(platform)
+      def self.is_supported?(_platform)
         true
       end
     end

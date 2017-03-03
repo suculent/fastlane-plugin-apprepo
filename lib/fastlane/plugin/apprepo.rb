@@ -27,10 +27,10 @@ module Fastlane
   end
 
   # Test only, should be removed...
-  UI.message('[apprepo.rb]: Initializing new CommandsGenerator')
-  cgen = Apprepo::CommandsGenerator.new
-  UI.message('[apprepo.rb]: Downloading Manifest...')
-  cgen.download_manifest
-  UI.message('[apprepo.rb]: Running Deployment...')
-  cgen.run
+  # UI.message('[apprepo.rb]: Initializing new CommandsGenerator')
+  # cgen = Apprepo::CommandsGenerator.new
+  # UI.message('[apprepo.rb]: Downloading Manifest...')
+  # cgen.download_manifest
+  # UI.message('[apprepo.rb]: Running Deployment...')
+  # cgen.run
 end

@@ -24,7 +24,7 @@ module Fastlane
         else
           UI.success('Binary upload skipped or no binary available.')
         end
-        
+
         notify unless options[:notify].nil?
       end
 
