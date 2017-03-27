@@ -15,8 +15,6 @@ fastlane-plugin-apprepo
 
 `fastlane-plugin-apprepo` can upload ipa files, app icons and manifest.json to your Enterprise iOS distribution site from the command line. 
 
-You can vote for Android support as well, Michal.
-
 Get in contact with the developer on Twitter: [@igraczech](https://twitter.com/igraczech)
 
 -------
