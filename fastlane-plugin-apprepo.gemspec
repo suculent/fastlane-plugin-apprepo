@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
   spec.files         = spec_files
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'net-ssh', '~> 3.1', '>= 3.1.1'
+  spec.add_dependency 'net-ssh', '~> 4.0', '>= 4.0.0'
   spec.add_dependency 'net-sftp', '~> 2.1', '>= 2.1.2'
   spec.add_dependency 'json', '~> 2.0', '>= 2.0.3'
 
