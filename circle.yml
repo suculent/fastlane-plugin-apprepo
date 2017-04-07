@@ -24,7 +24,6 @@ test:
 
   post:
     - curl -sSL https://download.sourceclear.com/ci.sh | sh
-#    - curl -X POST --data-urlencode 'payload={"text":"Hello, World A!"}' https://hooks.slack.com/services/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
     - curl -X POST --data-urlencode 'payload={"text":"Hello, World B!"}' https://hooks.slack.com/services/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
 
 ## Custom notifications
