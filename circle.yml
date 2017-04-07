@@ -19,12 +19,11 @@ test:
     - fastlane apprepo run
     - fastlane apprepo download_manifest
     - fastlane apprepo submit
-    - COVERALLS_REPO_TOKEN=5NIxBldNBfJzPgvlQnVojxNNW0197fUUf RAILS_ENV=test bundle exec rspec
+    - COVERALLS_REPO_TOKEN=dQDxuq9CdMJY5IWYmcFf8BdiHaUPFwZxQ RAILS_ENV=test bundle exec rspec
     - curl -X POST --data-urlencode 'payload={"text":"CirleCI Integration Completed."}' https://hooks.slack.com/services/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
 
   post:
     - curl -sSL https://download.sourceclear.com/ci.sh | sh
-#    - curl -X POST --data-urlencode 'payload={"text":"Hello, World A!"}' https://hooks.slack.com/services/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
     - curl -X POST --data-urlencode 'payload={"text":"Hello, World B!"}' https://hooks.slack.com/services/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
 
 ## Custom notifications
