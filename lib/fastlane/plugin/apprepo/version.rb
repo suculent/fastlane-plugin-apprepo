@@ -1,8 +1,8 @@
 module Fastlane
   # Static configuration values
   module Apprepo
-    VERSION = "0.4.2".freeze
-    SUMMARY = 'experimental fastlane plugin'.freeze
-    DESCRIPTION = 'experimental fastlane plugin based on https://github.com/suculent/apprepo SFTP uploader'.freeze
+    VERSION = "0.4.3".freeze
+    SUMMARY = 'Fastlane plugin for distributing artifacts with SFTP upload'.freeze
+    DESCRIPTION = 'Fastlane plugin SFTP/AppRepo uploader'.freeze
   end
 end
