@@ -1,1 +1,1 @@
-#gem "fastlane-plugin-apprepo"
+gem "fastlane-plugin-apprepo"
