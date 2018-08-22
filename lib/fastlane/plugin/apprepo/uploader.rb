@@ -74,13 +74,13 @@ module Fastlane
         success = false
         if !rsa_key.nil?
           FastlaneCore::UI.message('Logging in with RSA key...')
-          Net::SSH.start(host, user, {port: port},  key_data: rsa_key, keys_only: true) do |ssh|
+          Net::SSH.start(host, user, port: port, key_data: rsa_key, keys_only: true) do |ssh|
             FastlaneCore::UI.message('Uploading IPA & Manifest...')
             success = ssh_sftp_upload(ssh, ipa_path, manifest_path)
           end
         else
           FastlaneCore::UI.message('Logging in with username/password...')
-          Net::SSH.start(host, user, {port: port},  password: password) do |ssh|
+          Net::SSH.start(host, user, port: port,  password: password) do |ssh|
             FastlaneCore::UI.message('Uploading IPA & Manifest...')
             success = ssh_sftp_upload(ssh, ipa_path, manifest_path)
           end
@@ -100,13 +100,13 @@ module Fastlane
         success = true
         if !rsa_key.nil?
           FastlaneCore::UI.message('Logging in with RSA key for download...')
-          Net::SSH.start(host, user, {port: port},  key_data: rsa_key, keys_only: true) do |ssh|
+          Net::SSH.start(host, user, port: port,  key_data: rsa_key, keys_only: true) do |ssh|
             FastlaneCore::UI.message('Uploading UPA & Manifest...')
             success = ssh_sftp_download(ssh, manifest_path)
           end
         else
           FastlaneCore::UI.message('Logging in for download...')
-          Net::SSH.start(host, user, {port: port},  password: password) do |ssh|
+          Net::SSH.start(host, user, port: port,  password: password) do |ssh|
             FastlaneCore::UI.message('Uploading UPA & Manifest...')
             success = ssh_sftp_download(ssh, manifest_path)
           end
