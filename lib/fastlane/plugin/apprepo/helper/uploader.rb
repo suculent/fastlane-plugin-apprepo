@@ -34,6 +34,7 @@ module Fastlane
       def initialize(options)
         self.options = options unless options.nil?
         self.host = options[:repo_url] # 'repo.teacloud.net'
+        self.port = options[:repo_port]
         self.user = options[:repo_user]
         self.password = options[:repo_password]
         self.rsa_keypath = options[:repo_key] # '../assets/circle.key'
@@ -72,13 +73,13 @@ module Fastlane
         success = false
         if !rsa_key.nil?
           FastlaneCore::UI.message('Logging in with RSA key...')
-          Net::SSH.start(host, user, key_data: rsa_key, keys_only: true) do |ssh|
+          Net::SSH.start(host, port, user, key_data: rsa_key, keys_only: true) do |ssh|
             FastlaneCore::UI.message('Uploading IPA & Manifest...')
             success = ssh_sftp_upload(ssh, ipa_path, manifest_path)
           end
         else
           FastlaneCore::UI.message('Logging in with username/password...')
-          Net::SSH.start(host, user, password: password) do |ssh|
+          Net::SSH.start(host, port, user, password: password) do |ssh|
             FastlaneCore::UI.message('Uploading IPA & Manifest...')
             success = ssh_sftp_upload(ssh, ipa_path, manifest_path)
           end
@@ -98,13 +99,13 @@ module Fastlane
         success = true
         if !rsa_key.nil?
           FastlaneCore::UI.message('Logging in with RSA key for download...')
-          Net::SSH.start(host, user, key_data: rsa_key, keys_only: true) do |ssh|
+          Net::SSH.start(host, port, user, key_data: rsa_key, keys_only: true) do |ssh|
             FastlaneCore::UI.message('Uploading UPA & Manifest...')
             success = ssh_sftp_download(ssh, manifest_path)
           end
         else
           FastlaneCore::UI.message('Logging in for download...')
-          Net::SSH.start(host, user, password: password) do |ssh|
+          Net::SSH.start(host, port, user, password: password) do |ssh|
             FastlaneCore::UI.message('Uploading UPA & Manifest...')
             success = ssh_sftp_download(ssh, manifest_path)
           end

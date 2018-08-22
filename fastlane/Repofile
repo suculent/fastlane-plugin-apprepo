@@ -7,7 +7,7 @@
 
 app_identifier "com.apprepo.test" # your app's bundle identifier
 ipa "./sampleapp.ipa" # can be overriden with --ipa
-manifest_path "./manifest.json" # Path to the manifest.json you want to use. 
+manifest_path "./manifest.json" # Path to the manifest.json you want to use.
 
 #
 # Authentication
@@ -17,11 +17,12 @@ manifest_path "./manifest.json" # Path to the manifest.json you want to use.
 
 
 repo_url "207.154.207.81"
+repo_port 22
 repo_user "circle"
 repo_key "assets/circle.key"
 # repo_key "/Users/sychram/.ssh/circle.key" # should have 'chmod 600'
 
-notify true # Add this to automatically notify the AppRepo users after uploading metadata/binary. 
+notify true # Add this to automatically notify the AppRepo users after uploading metadata/binary.
 
 # Optionals
 

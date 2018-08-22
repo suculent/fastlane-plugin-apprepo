@@ -1,12 +1,14 @@
 machine:
   ruby:
-    version: 2.2.5
+    version: 2.4
 
 dependencies:
   pre:
     - gem install bundler
     - gem install fastlane
     - bundle update
+    - export LC_ALL=en_US.UTF-8
+    - export LANG=en_US.UTF-8
 
   override:
     - bundle install: # note ':' here

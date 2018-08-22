@@ -64,7 +64,7 @@ module Fastlane
 
       def notify
         # should be in metadata
-        UI.command_output('TODO: Missing implementation for Apprepo Push Notifier')
+        # UI.command_output('TODO: Missing implementation for Apprepo Push Notifier')
       end
     end
   end

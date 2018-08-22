@@ -20,12 +20,13 @@ repo_title "[[APP_NAME]]"
 # You can use your '~/.ssh/config' file to setup RSA keys to Apprepo, or use following options:
 
 repo_url "repo.teacloud.net"
+repo_port 22
 repo_user "circle"
 repo_key "./lib/assets/circle.pub"
 
-# notify true # Add this to automatically notify the Apprepo users after uploading metadata/binary. 
+# notify true # Add this to automatically notify the Apprepo users after uploading metadata/binary.
 
-# manifest_path "./manifest.json" # Path to the manifest.json you want to use. 
+# manifest_path "./manifest.json" # Path to the manifest.json you want to use.
 
 # repo_summary "Some application"
 
