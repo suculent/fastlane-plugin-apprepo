@@ -82,6 +82,7 @@ jobs:
     # This is based on your 1.0 configuration file or project settings
     - run: nslookup repo.teacloud.net
     - run: fastlane add_plugin apprepo
+    - run: chmod 0600 assets/circle.key
     - run: fastlane apprepo run
     - run: fastlane apprepo download_manifest
     - run: fastlane apprepo submit

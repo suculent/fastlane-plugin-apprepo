@@ -22,7 +22,7 @@ repo_title "[[APP_NAME]]"
 repo_url "repo.teacloud.net"
 repo_port "22"
 repo_user "circle"
-repo_key "./lib/assets/circle.pub"
+repo_key "./lib/assets/circle.key"
 
 # notify true # Add this to automatically notify the Apprepo users after uploading metadata/binary.
 
