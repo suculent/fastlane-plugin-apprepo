@@ -17,7 +17,7 @@ manifest_path "./manifest.json" # Path to the manifest.json you want to use.
 
 
 repo_url "207.154.207.81"
-repo_port 22
+repo_port "22"
 repo_user "circle"
 repo_key "assets/circle.key"
 # repo_key "/Users/sychram/.ssh/circle.key" # should have 'chmod 600'
