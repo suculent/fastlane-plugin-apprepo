@@ -272,7 +272,7 @@ module Fastlane
       end
 
       def remote_manifest_path(appcode)
-        remote_manifest_path = remote_path(appcode) + 'manifest.json'
+        remote_path(appcode) + 'manifest.json'
       end
 
       def generate_remote_path
