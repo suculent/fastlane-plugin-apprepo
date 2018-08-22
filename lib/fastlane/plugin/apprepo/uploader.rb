@@ -137,8 +137,11 @@ module Fastlane
           puts JSON.pretty_generate(manifest) unless manifest.nil?
           bump_ipa(sftp, local_ipa_path, appcode)
           remote_ipa_path = get_remote_ipa_path(local_ipa_path, appcode)
+          FastlaneCore::UI.command_output('Uploading IPA...')
           upload_ipa(sftp, local_ipa_path, remote_ipa_path)
+          FastlaneCore::UI.command_output('Uploading manifest...')
           upload_manifest(sftp, manifest_path, remote_manifest_path(appcode))
+          FastlaneCore::UI.command_output('Verification...')
           # Lists the entries in a directory for verification
           sftp.dir.foreach(path) do |entry|
             FastlaneCore::UI.message(entry.longname)
