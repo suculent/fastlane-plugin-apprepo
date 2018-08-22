@@ -23,6 +23,7 @@ module Fastlane
 
       attr_accessor :host
       attr_accessor :user
+      attr_accessor :port
       attr_accessor :password
       attr_accessor :rsa_keypath
       attr_accessor :ipa_path
