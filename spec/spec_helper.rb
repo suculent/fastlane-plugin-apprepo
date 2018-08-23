@@ -12,4 +12,10 @@ end
 require 'fastlane' # to import the Action super class
 require 'fastlane/plugin/apprepo' # import the actual plugin
 
+FastlaneCore::CommandExecutor.execute(command: "fastlane apprepo",
+                                      print_all: true,
+                                      error: proc do |error_output|
+                                      # handle error here
+                                      end)
+
 # WebMock.disable_net_connect!(allow: 'coveralls.io')
