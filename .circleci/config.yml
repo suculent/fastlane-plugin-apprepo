@@ -87,9 +87,7 @@ jobs:
     - run: fastlane add_plugin apprepo        
     - run: chmod 0600 assets/circle.key
     - run: cp assets/circle.key ~/.ssh/circle.key
-    - run:
-        name: Test SSH Keys
-          command: ssh -o StrictHostKeyChecking=no -vvv circle@repo.teacloud.net 'ls'
+    - run: ssh -o StrictHostKeyChecking=no -vvv circle@repo.teacloud.net 'ls'
     - run: fastlane apprepo run
     - run: fastlane apprepo download_manifest
     - run: fastlane apprepo submit
