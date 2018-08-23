@@ -55,7 +55,9 @@ jobs:
         - v1-dep-master-
         # Any branch if there are none on the default branch - this should be unnecessary if you have your default branch configured correctly
         - v1-dep-
-    # This is based on your 1.0 configuration file or project settings
+    - add_ssh_keys:
+        fingerprints:
+          - "c5:05:42:ee:27:1b:59:aa:ca:7d:4d:fa:12:f7:40:50"
     - run: gem install bundler
     - run: gem install fastlane
     - run: bundle update
