@@ -19,6 +19,7 @@ jobs:
       CIRCLE_TEST_REPORTS: /tmp/circleci-test-results
       LC_ALL: en_US.UTF-8
       LANG: en_US.UTF-8
+      SRCCLR_API_TOKEN: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZWFtSWQiOiIxMjcwNSIsInNjb3BlIjpbXSwiaWQiOjIzMDIyLCJleHAiOjE1MzUwMzExNDEsImF1dGhvcml0aWVzIjoiQUdFTlQiLCJvcmdJZCI6IjIzNDMiLCJqdGkiOiJlZGJjMTA5MC1mMWFmLTQ4ZjAtYTVjYS0zMGFmMTMwY2IxMjkiLCJjbGllbnRfaWQiOiIifQ.zEeIzkj1W4L-rqFx_Lgc4ffJChATCrMi4DZGl0WKSmJI1FlPz3UwYPKfC08wk0P81Tzyamn1KsqANlN3ei2vgM10Mu_FDMsYI7uO5imN6MnCsZcxhCOk_raFcazPis_7tBjNzlOoeVop4NZFG-kOozPDCf17JJ1JyGv7JjbDQVs
     # In CircleCI 1.0 we used a pre-configured image with a large number of languages and other packages.
     # In CircleCI 2.0 you can now specify your own image, or use one of our pre-configured images.
     # The following configuration line tells CircleCI to use the specified docker image as the runtime environment for you job.
