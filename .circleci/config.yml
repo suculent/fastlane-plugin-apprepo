@@ -32,78 +32,78 @@ jobs:
     - image: circleci/build-image:ubuntu-14.04-XXL-upstart-1189-5614f37
       command: /sbin/init
     steps:
-        # Machine Setup
-        #   If you break your build into multiple jobs with workflows, you will probably want to do the parts of this that are relevant in each
-        # The following `checkout` command checks out your code to your working directory. In 1.0 we did this implicitly. In 2.0 you can choose where in the course of a job your code should be checked out.
-        - checkout
-        # Prepare for artifact and test results  collection equivalent to how it was done on 1.0.
-        # In many cases you can simplify this from what is generated here.
-        # 'See docs on artifact collection here https://circleci.com/docs/2.0/artifacts/'
-        - run: mkdir -p $CIRCLE_ARTIFACTS $CIRCLE_TEST_REPORTS
-        # This is based on your 1.0 configuration file or project settings
-        - run:
-            working_directory: ~/suculent/fastlane-plugin-apprepo
-            command: rm -f suculent/fastlane-plugin-apprepo/.rvmrc; echo 2.4 > suculent/fastlane-plugin-apprepo/.ruby-version; rvm use 2.4 --default
-        # Dependencies
-        #   This would typically go in either a build or a build-and-test job when using workflows
-        # Restore the dependency cache
-        - restore_cache:
-            keys:
-            # This branch if available
-            - v1-dep-{{ .Branch }}-
-            # Default branch if not
-            - v1-dep-master-
-            # Any branch if there are none on the default branch - this should be unnecessary if you have your default branch configured correctly
-            - v1-dep-
-        - add_ssh_keys:
-            fingerprints:
-              - "c5:05:42:ee:27:1b:59:aa:ca:7d:4d:fa:12:f7:40:50" # deprecated fingerprint for circle.key (removed from repo, invalidated)
-              - "ff:c5:f1:83:99:01:62:d6:59:62:4d:26:6e:80:af:b9" # new fingerprint
-        - run: gem install bundler
-        - run: gem install fastlane
-        - run: bundle update
-        # This is based on your 1.0 configuration file or project settings
-        - run:
-            command: bundle install
-            no_output_timeout: 180s
-        # Save dependency cache
-        - save_cache:
-            key: v1-dep-{{ .Branch }}-{{ epoch }}
-            paths:
-            # This is a broad list of cache paths to include many possible development environments
-            # You can probably delete some of these entries
-            - vendor/bundle
-            - ~/virtualenvs
-            - ~/.m2
-            - ~/.ivy2
-            - ~/.bundle
-            - ~/.go_workspace
-            - ~/.gradle
-            - ~/.cache/bower
-        # Test
-        #   This would typically be a build job when using workflows, possibly combined with build
-        # This is based on your 1.0 configuration file or project settings
-        - run: nslookup repo.teacloud.net
-        - run: fastlane add_plugin apprepo        
-        - run: chmod 0600 assets/circle.key
-        - run: cp assets/circle.key ~/.ssh/circle.key
-        - run:
-            name: Test SSH Keys
-              command: ssh -o StrictHostKeyChecking=no -vvv circle@repo.teacloud.net 'ls'
-        - run: fastlane apprepo run
-        - run: fastlane apprepo download_manifest
-        - run: fastlane apprepo submit
-        - run: COVERALLS_REPO_TOKEN=dQDxuq9CdMJY5IWYmcFf8BdiHaUPFwZxQ RAILS_ENV=test bundle exec rspec
-        - run: curl -X POST --data-urlencode 'payload={"text":"CirleCI Integration Completed."}' https://hooks.slack.com/services/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
-        # This is based on your 1.0 configuration file or project settings
-        - run: curl -sSL https://download.sourceclear.com/ci.sh | sh
-        # Teardown
-        #   If you break your build into multiple jobs with workflows, you will probably want to do the parts of this that are relevant in each
-        # Save test results
-        - store_test_results:
-            path: /tmp/circleci-test-results
-        # Save artifacts
-        - store_artifacts:
-            path: /tmp/circleci-artifacts
-        - store_artifacts:
-            path: /tmp/circleci-test-results
+    # Machine Setup
+    #   If you break your build into multiple jobs with workflows, you will probably want to do the parts of this that are relevant in each
+    # The following `checkout` command checks out your code to your working directory. In 1.0 we did this implicitly. In 2.0 you can choose where in the course of a job your code should be checked out.
+    - checkout
+    # Prepare for artifact and test results  collection equivalent to how it was done on 1.0.
+    # In many cases you can simplify this from what is generated here.
+    # 'See docs on artifact collection here https://circleci.com/docs/2.0/artifacts/'
+    - run: mkdir -p $CIRCLE_ARTIFACTS $CIRCLE_TEST_REPORTS
+    # This is based on your 1.0 configuration file or project settings
+    - run:
+        working_directory: ~/suculent/fastlane-plugin-apprepo
+        command: rm -f suculent/fastlane-plugin-apprepo/.rvmrc; echo 2.4 > suculent/fastlane-plugin-apprepo/.ruby-version; rvm use 2.4 --default
+    # Dependencies
+    #   This would typically go in either a build or a build-and-test job when using workflows
+    # Restore the dependency cache
+    - restore_cache:
+        keys:
+        # This branch if available
+        - v1-dep-{{ .Branch }}-
+        # Default branch if not
+        - v1-dep-master-
+        # Any branch if there are none on the default branch - this should be unnecessary if you have your default branch configured correctly
+        - v1-dep-
+    - add_ssh_keys:
+        fingerprints:
+          - "c5:05:42:ee:27:1b:59:aa:ca:7d:4d:fa:12:f7:40:50" # deprecated fingerprint for circle.key (removed from repo, invalidated)
+          - "ff:c5:f1:83:99:01:62:d6:59:62:4d:26:6e:80:af:b9" # new fingerprint
+    - run: gem install bundler
+    - run: gem install fastlane
+    - run: bundle update
+    # This is based on your 1.0 configuration file or project settings
+    - run:
+        command: bundle install
+        no_output_timeout: 180s
+    # Save dependency cache
+    - save_cache:
+        key: v1-dep-{{ .Branch }}-{{ epoch }}
+        paths:
+        # This is a broad list of cache paths to include many possible development environments
+        # You can probably delete some of these entries
+        - vendor/bundle
+        - ~/virtualenvs
+        - ~/.m2
+        - ~/.ivy2
+        - ~/.bundle
+        - ~/.go_workspace
+        - ~/.gradle
+        - ~/.cache/bower
+    # Test
+    #   This would typically be a build job when using workflows, possibly combined with build
+    # This is based on your 1.0 configuration file or project settings
+    - run: nslookup repo.teacloud.net
+    - run: fastlane add_plugin apprepo        
+    - run: chmod 0600 assets/circle.key
+    - run: cp assets/circle.key ~/.ssh/circle.key
+    - run:
+        name: Test SSH Keys
+          command: ssh -o StrictHostKeyChecking=no -vvv circle@repo.teacloud.net 'ls'
+    - run: fastlane apprepo run
+    - run: fastlane apprepo download_manifest
+    - run: fastlane apprepo submit
+    - run: COVERALLS_REPO_TOKEN=dQDxuq9CdMJY5IWYmcFf8BdiHaUPFwZxQ RAILS_ENV=test bundle exec rspec
+    - run: curl -X POST --data-urlencode 'payload={"text":"CirleCI Integration Completed."}' https://hooks.slack.com/services/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
+    # This is based on your 1.0 configuration file or project settings
+    - run: curl -sSL https://download.sourceclear.com/ci.sh | sh
+    # Teardown
+    #   If you break your build into multiple jobs with workflows, you will probably want to do the parts of this that are relevant in each
+    # Save test results
+    - store_test_results:
+        path: /tmp/circleci-test-results
+    # Save artifacts
+    - store_artifacts:
+        path: /tmp/circleci-artifacts
+    - store_artifacts:
+        path: /tmp/circleci-test-results
