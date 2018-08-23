@@ -12,6 +12,7 @@ app_identifier "[[APP_IDENTIFIER]]"
 ipa "[[Apprepo_IPA_PATH]]"
 app_version "[[APP_VERSION]]"
 repo_title "[[APP_NAME]]"
+appcode "[[APPREPO_FOLDER_NAME]]"
 
 #
 # Authentication
@@ -24,12 +25,12 @@ repo_port "22"
 repo_user "circle"
 repo_key "./lib/assets/circle.key"
 
-# notify true # Add this to automatically notify the Apprepo users after uploading metadata/binary.
+notify true # Add this to automatically notify the Apprepo users after uploading metadata/binary; not implemented yet
 
-# manifest_path "./manifest.json" # Path to the manifest.json you want to use.
+manifest_path "./manifest.json" # Path to the manifest.json you want to use.
 
-# repo_summary "Some application"
+repo_summary "Some application"
 
-# repo_description "Detailed application description."
+repo_description "Detailed application description."
 
-# app_icon './AppIcon.png'
+app_icon './assets/apprepo.png'
